@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    font-family: 'Merriweather', serif;
+    line-height: 1.5;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-nav{
+    margin-left:auto;
+}
+.navbar{
+    font-size: 1em;
+}
+.container-1{
+    background-color: #2C3333;
+    padding: 1% 9%;
+    padding-bottom:0;
+    color: #fff;
+
+}
+.heading1{
+    font-size:3em;
+}
+.navbar-brand{
+    font-size: 1.5rem;;
+}
+.container-3{
+    background-color: #2C3333;
+    color: #fff;
+    text-align: center;
+    padding:3%;
+    position:relative;
+    bottom:0;
+}

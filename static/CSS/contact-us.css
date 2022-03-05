@@ -1,0 +1,18 @@
+.form1{
+    width:37%;
+    margin: 3% auto;
+    
+}
+.in{
+    width:100%;
+    border-radius: 11px;
+    border-style: dotted;
+    border-width: 2px;
+    margin:1%;
+}
+.in:focus{
+outline: none;
+}
+.btn-primary{
+    margin:1%;
+}

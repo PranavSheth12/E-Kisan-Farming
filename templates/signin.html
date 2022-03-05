@@ -1,0 +1,32 @@
+{% extends "generic.html" %}
+{% load static %}
+
+{% block CSS-links %}
+<link rel="stylesheet" href="{% static 'CSS/signin.css' %} " />
+
+{% endblock CSS-links %}
+
+{% block container-2 %}
+   
+
+    <section class="container-2">
+        
+        <form action="#" class="form1" method="post">
+            {% csrf_token %}
+            <h1 style="font-size: 2.75rem;"> Login with us</h1>
+            <hr>
+            <label for="name">Username  </label><br>
+            <input type="text" class="in" name="username" placeholder="  Enter your username" required><br>
+
+            <label for="phone">Password  </label><br>
+            <input type="password" class="in" name="password" placeholder="  Enter your password " required><br>
+
+            <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+            <div class="forgot-pass">
+                <a href="{% url 'forgot-password' %}" style="text-decoration: none; color:#2C3333">forgot password</a>
+                <a href="{% url 'sign-up' %}" style="text-decoration: none; color:#2C3333">Sign Up</a>
+            </div>
+        </form>
+        
+    </section>
+    {% endblock container-2 %}

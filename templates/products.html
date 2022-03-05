@@ -1,0 +1,49 @@
+{% extends "generic.html" %}
+{% load static %}
+
+{% block CSS-links %}
+<link rel="stylesheet" href="{% static 'CSS/products.css' %} " />
+
+{% endblock CSS-links %}
+
+{% block container-2 %}
+   
+
+    <section class="container-2">
+        <div class="container-fluid">
+            <div class="row">
+                
+                
+                
+                <div class="box col-md-4">
+                    <div class="card">
+                        <img src="{% static 'Images/banana-modified.png' %} " alt="Denim Jeans" style="width:auto">
+                        <h1>Banana</h1>
+                        <p class="price">19.99Rs</p>
+                        <p>Some text about the jeans..</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="box col-md-4">
+                    <div class="card">
+                        <img src="{% static 'Images/cotton-modified.png' %} " alt="Denim Jeans" style="width:auto">
+                        <h1>Cotton</h1>
+                        <p class="price">20.99Rs</p>
+                        <p>Some text about the jeans..</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="box col-md-4">
+                    <div class="card">
+                        <img src="{% static 'Images/papaya-modified.png' %} " alt="Denim Jeans" style="width:auto">
+                        <h1>Papaya</h1>
+                        <p class="price">21.99Rs</p>
+                        <p>Some text about the jeans..</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    {% endblock container-2 %}
