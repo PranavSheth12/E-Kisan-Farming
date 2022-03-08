@@ -1,0 +1,22 @@
+{% extends "generic.html" %}
+{% load static %}
+
+{% block CSS-links %}
+<link rel="stylesheet" href="{% static 'CSS/profile.css' %} " />
+
+{% endblock CSS-links %}
+
+{% block container-2 %}
+   <section class="container-2">
+       <div class="container-fluid">
+          <div class="row">
+             <div class="col-lg-4">
+               <img src="{% static 'Images/profile.png'%}" alt="" class="profimg">
+             </div>
+             <div class="col-lg-8">
+
+             </div>
+          </div>
+       </div>
+   </section>
+{% endblock container-2 %}

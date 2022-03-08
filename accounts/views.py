@@ -46,3 +46,6 @@ def sign_out(request):
     
 def forgot_password(request):
     return render(request,'forgot-password.html')
+
+def profile(request):
+    return render(request,'profile.html')
