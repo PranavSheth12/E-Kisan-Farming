@@ -25,3 +25,6 @@ def products(request):
 
 def cart(request):
     return render(request,'cart.html')
+
+def aboutus(request):
+    return render(request,'aboutus.html')
