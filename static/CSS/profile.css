@@ -1,6 +1,30 @@
-
-
+.container-fluid{
+    margin:3%;
+}
+.container-2{
+    margin:auto;
+}
 .profimg{
-    height:70%;
+    height:200px;
+    width:200px;
+}
+.info{
+    padding: 0 5%;
+}
+.name{
+    padding:5% 0;
+    font-size: 1.5rem;
+}
+
+.btn-primary{
+    margin:1%;
+    width:100%;
+}
+.content-2{
+    text-align: center;
+
+}
+hr{
     width:70%;
+    margin: 0 auto;
 }
