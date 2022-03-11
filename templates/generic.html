@@ -53,9 +53,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact-us' %}">Contact us</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i> {{user.username}}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="{% url 'sign-out' %}">logout</a></li>
+                          
+                        </ul>
+                      </li>
+                    
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'sign-up' %}">Login/Register</a>
                     </li>
+                    {% endif %}
+                    
                 </ul>
             </div>
         </nav>

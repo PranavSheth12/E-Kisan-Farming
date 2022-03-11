@@ -9,7 +9,11 @@
     width:200px;
 }
 .info{
-    padding: 0 5%;
+    padding: 2% 5%;
+    background-color:  rgb(242 243 244);
+    border-radius: 20px;
+    height:min-content;
+
 }
 .name{
     padding:5% 0;
@@ -20,11 +24,36 @@
     margin:1%;
     width:100%;
 }
-.content-2{
+.info-2{
     text-align: center;
 
 }
 hr{
     width:70%;
     margin: 0 auto;
+}
+.content-2{
+    width:65%;
+    margin:3% auto 1%; 
+    padding: 1%;
+    /* border: 0.05rem solid gray; */
+    border-radius: 23px;
+    background-color:  rgb(242 243 244);
+}
+.carousel-img{
+    width:70%;
+    height:150px;
+}
+.data{
+    text-align: left;
+}
+td{
+    text-align: left;
+}
+.content-2-btn{
+    width:65%;
+    margin:0 auto;
+}
+.content-2-btn > .btn{
+    width: 10%;
 }
