@@ -7,139 +7,82 @@
 {% endblock CSS-links %}
 
 {% block container-2 %}
-   
 
 
-    <section class="cart">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="cart_table_box">
-                        <table class="cart_table">
-                            <thead class="cart_table_head">
-                                <tr>
-                                    <th>Item</th>
-                                    <th></th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Remove</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2">
-                                        <div class="colum_box">
-                                            <div class="prod_thum">
-                                                <a href="#"><img src="Images/papaya-modified.png" width="100%"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="title">
-                                                <h3 class="prod-title">Basket full of vegetables</h3>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro_price">$9.99</td>
-                                    <td class="pro_qty">
-                                        <div class="product-quantity-box">
-                                            <div class="input-box">
-                                                <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro_sub_total">$9.99</td>
-                                    <td>
-                                        <div class="pro_remove">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <div class="colum_box">
-                                            <div class="prod_thum">
-                                                <a href="#"><img src="Images/banana-modified.png" width="100%"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="title">
-                                                <h3 class="prod-title">Oranges</h3>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro_price">$9.99</td>
-                                    <td class="pro_qty">
-                                        <div class="product-quantity-box">
-                                            <div class="input-box">
-                                                <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro_sub_total">$9.99</td>
-                                    <td>
-                                        <div class="pro_remove">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <div class="colum_box">
-                                            <div class="prod_thum">
-                                                <a href="#"><img src="Images/cotton-modified.png" width="100%"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="title">
-                                                <h3 class="prod-title">Oranges</h3>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro_price">$9.99</td>
-                                    <td class="pro_qty">
-                                        <div class="product-quantity-box">
-                                            <div class="input-box">
-                                                <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro_sub_total">$9.99</td>
-                                    <td>
-                                        <div class="pro_remove">
-                                            <i class="fas fa-times"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row cart_apply_coupon_box">
-                <div class="col-xl-6">
-                    <div class="apply_coupon">
-                        <div class="apply_coupon_input_box">
-                            <input type="text" name="coupon-code" value="" placeholder="Enter Coupon Code">
-                        </div>
-                        <div class="apply-coupon-button">
-                            <button class="thm-btn" type="submit">Apply Coupon</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <ul class="total_box list-unstyled">
-                        <li><span>Subtotal</span>$19.98 USD</li>
-                        <li><span>Shipping Cost</span>$0.00 USD</li>
-                        <li><span>Total</span>$19.98 USD</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="button_box">
-                        <button class="thm-btn update_btn" type="button">Update</button>
-                        <button class="thm-btn checkout_btn" type="button">Checkout</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    {% endblock container-2 %}
+
+<h1>Shopping Cart</h1>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Dingo Dog Bones</div>
+      <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+    </div>
+    <div class="product-price">12.99</div>
+    <div class="product-quantity">
+      <input type="number" value="2" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">25.98</div>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+      <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+    </div>
+    <div class="product-price">45.99</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">45.99</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">71.97</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">3.60</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">90.57</div>
+    </div>
+  </div>
+      
+      <button class="checkout">Checkout</button>
+
+</div>
+{% endblock container-2 %}
