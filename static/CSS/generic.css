@@ -2,6 +2,7 @@ body{
     margin:0;
     font-family: 'Merriweather', serif;
     line-height: 1.5;
+    background-color: #fff;
 }
 
 p{
@@ -32,4 +33,8 @@ p{
     text-align: center;
     padding:3%;
     
+}
+
+.dropdown-items{
+    padding:1% 1%;
 }

@@ -9,10 +9,12 @@ from django.contrib.auth.models import AbstractUser
 class CustomUser(models.Model):
     
     username = models.CharField(max_length=50,default="",unique=TRUE)
+    name = models.CharField(max_length=50,default="")
+    date_of_birth = models.DateField()
     category = models.CharField(max_length=50,default="")
     email = models.EmailField(max_length=254,default="")
     phone = models.IntegerField(default=0)
-    password = models.CharField(max_length=50,default="")
+
 
     def __str__(self):
         return self.username

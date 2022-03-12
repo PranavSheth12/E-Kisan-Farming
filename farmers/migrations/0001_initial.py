@@ -12,13 +12,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name='myproduct',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(default='', max_length=50)),
-                ('email', models.EmailField(default='', max_length=254)),
-                ('phone', models.IntegerField(default=0)),
-                ('message', models.TextField(default='', max_length=500)),
+                ('sown', models.DateField()),
+                ('reap', models.DateField()),
+                ('land_area', models.BigIntegerField(default=0)),
+                ('area', models.CharField(default='', max_length=50)),
             ],
         ),
     ]

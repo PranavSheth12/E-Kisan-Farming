@@ -14,7 +14,7 @@ def sign_in(request):
         if user is not None:
             login(request,user)
             # messages.success(request, 'Logged in successfully')
-            return redirect('home')
+            return redirect('profile')
         else:
             #messages.error(request, 'Wrong username or password')
             return render(request,'signin.html',)
@@ -29,7 +29,7 @@ def sign_up(request):
 
         password = request.POST.get('password')
         
-        customUser = CustomUser(username = username, email = email, phone=phone,category=category,password=password)
+        customUser = CustomUser(username = username, email = email, phone=phone,category=category)
         user = User.objects.create_user(username=username, email=email,
                                                 password=f'{password}')
         user.save()
@@ -47,5 +47,3 @@ def sign_out(request):
 def forgot_password(request):
     return render(request,'forgot-password.html')
 
-def profile(request):
-    return render(request,'profile.html')
