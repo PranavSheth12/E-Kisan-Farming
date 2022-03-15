@@ -9,12 +9,16 @@
 {% block container-2 %}
     <section class="container-2">
         
-        <form action="#" class="form1" method="post">
+        <form action="#" class="form1" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <h1 style="font-size: 2.75rem;"> Register with us</h1>
             <hr>
-            <label for="name">Username  </label><br>
-            <input type="text" class="in" name="username" placeholder="  Enter your name" required><br>
+            <label for="username">Username  </label><br>
+            <input type="text" class="in" name="username" placeholder="  Enter your username" required><br>
+
+            <label for="name">Full name  </label><br>
+            <input type="text" class="in" name="name" placeholder="  Enter full name" required><br>
+
 
             <label for="category">Category </label><br>
             <select name="category" id="category" class="in" required>
@@ -30,12 +34,17 @@
             <label for="phone">Contact </label><br>
             <input type="number" class="in" name="phone" placeholder="  Enter your contact number" required><br>
 
+            <label for="date_of_birth">Date of birth </label><br>
+            <input type="date" class="in" name="date_of_birth" placeholder="  Enter your date of birth" required><br>
 
-            <label for="phone">Password  </label><br>
+            <label for="profile_pic">Profile Photo</label><br>
+            <input type="file" class="in" name="profile_pic"  required><br>
+
+            <label for="password">Password  </label><br>
             <input type="password" class="in" name="password" placeholder="  Enter your password " minlength="8" required><br>
 
-            <label for="message">Re-type Password  </label><br>
-            <input type="password" class="in" name="repassword" placeholder="Enter your password again" minlength="8" required><br>
+            <label for="password">Re-type Password  </label><br>
+            <input type="password" class="in" name="repassword" placeholder="Re-type password" minlength="8" required><br>
             <input class="btn btn-primary btn-sm" type="submit" value="Sign Up">
             
 

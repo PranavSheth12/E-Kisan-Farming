@@ -7,6 +7,7 @@
 .profimg{
     height:200px;
     width:200px;
+    border-radius: 100%;
 }
 .info{
     padding: 2% 5%;
@@ -40,8 +41,7 @@ hr{
     border-radius: 23px;
     background-color:  rgb(242 243 244);
 }
-.carousel-img{
-    width:70%;
+.img{
     height:150px;
 }
 .data{

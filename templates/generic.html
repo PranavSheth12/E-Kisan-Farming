@@ -41,9 +41,7 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="{% url 'aboutus' %}">About us</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="{% url 'products' %}">Products</a>
                     </li>
@@ -59,6 +57,7 @@
                             <i class="fa-solid fa-user"></i> {{user.username}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
                           <li><a class="dropdown-item" href="{% url 'sign-out' %}">logout</a></li>
                           
                         </ul>
@@ -77,7 +76,7 @@
     </section>
     {% block container-2 %}
     {% endblock container-2 %}
-    <section class="container-3">
+    <section class="container-3  ">
         <p>Copyright © 2022 E-Kisan Farming</p>
     </section>
 </body>

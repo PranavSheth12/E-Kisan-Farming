@@ -22,17 +22,20 @@ def sign_in(request):
 
 def sign_up(request):
     if request.method == 'POST':
+
         username = request.POST.get('username')
+        name = request.POST.get('name')
+        profile_pic = request.POST.get('profile_pic')
         email = request.POST.get('email')
+        date_of_birth = request.POST.get('date_of_birth')
         phone = request.POST.get('phone')
         category = request.POST.get('category')
 
         password = request.POST.get('password')
         
-        customUser = CustomUser(username = username, email = email, phone=phone,category=category)
-        user = User.objects.create_user(username=username, email=email,
-                                                password=f'{password}')
+        user = User.objects.create_user(username=username, email=email,password=f'{password}')
         user.save()
+        customUser = CustomUser(username = username,name = name, email = email,date_of_birth = date_of_birth,profile_pic = profile_pic, phone=phone,category=category )
         customUser.save()
         
         # messages.success(request,"You have signed up successfully")

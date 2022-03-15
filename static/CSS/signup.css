@@ -26,3 +26,16 @@ outline: none;
     margin-top:0%;
     margin-bottom: 2%;;
 }
+
+@media screen and (max-width: 986px)
+{
+    .form1{
+        width:25%;
+    }
+}
+@media screen and (max-width: 425px)
+{
+    .form1{
+        width:90%;
+    }
+}

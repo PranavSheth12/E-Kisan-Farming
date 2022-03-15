@@ -2,8 +2,8 @@ body{
     margin:0;
     font-family: 'Merriweather', serif;
     line-height: 1.5;
+    background-color: #fff;
 }
-
 p{
     font-family: 'Montserrat', sans-serif;
 }
@@ -50,7 +50,7 @@ p{
     
 }
 .container-2{
-    padding:7% 12%;
+    padding:2% 12%;
 }
 .container-3{
     background-color: #2C3333;
@@ -63,25 +63,7 @@ p{
 
 /* about us */
 
-	
-.background{
-	
-	/* The background image will change whenever
-	we load the page */
-	background: grey;
-	
-	/* This will make the background that have
-	been added will be darken */
-	background-blend-mode:darken;
-	background-size:cover;
-}
-	
-.firstsection{
-	
-	/* It is to make the height of the
-	viewport to be 100 */
-	height:100%;
-}
+
 	
 .box-main{
 	
@@ -106,42 +88,19 @@ p{
 }
 	
 .firstHalf{	
-	width:75%;
-	display:flex;
-	
-	/* It is to specify the direction of
-	the flexible items */
-	flex-direction:column;
-	justify-content:center
+	padding: 2% 15%;
+	margin:2% auto;
+	background-color: rgb(242 243 244);
 }
 	
-.firstHalf img{	
-	display:flex;
-	border-radius:9050px;
-}
-	
-/* This is used to make the text to
-appear bigger */
-/* Now we have used a font here to distinguish
-itself from the next text */
+
 .text-big{
-	/* font-family: 'Piazzolla', serif; */
-	
-	/* The text to have a style of bold */
-	font-weight: bold;
-	
-	/* The size of the text to be appearing as
-	bigger to distinguish itself from the text
-	in the class text-small */
-	font-size: 41px;
-	
-	/* The text to be aligned at center */
+	color:black;
 	text-align:center;
 }
 	
 .text-small{	
-	/* font-family: 'Sansita Swashed', cursive; */
-	font-size: 18px;
+	color:black;
 	text-align:center;
 }
 	
