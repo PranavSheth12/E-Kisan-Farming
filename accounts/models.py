@@ -11,7 +11,7 @@ class CustomUser(models.Model):
     username = models.CharField(max_length=50,default="",unique=True)
 
     name = models.CharField(max_length=50,default="")
-    profile_pic  = models.FileField(upload_to='media/profile-pic',help_text='Image should be in jpeg/jpg/png form and image size should be 250*250')
+    profile_pic  = models.FileField(upload_to='profile_pic',help_text='Image should be in jpeg/jpg/png form and image size should be 250*250')
     date_of_birth = models.DateField()
     category = models.CharField(max_length=50,default="")
     email = models.EmailField(max_length=254,default="")
