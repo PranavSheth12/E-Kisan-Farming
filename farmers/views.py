@@ -9,10 +9,13 @@ from accounts.models import CustomUser
 
 def profile(request):
 
-    user  = request.user
-    user = CustomUser.objects.get(username = user.username)
+    if request.user.is_authenticated:
+        user  = request.user
+        user = CustomUser.objects.get(username = user.username)
 
-    return render(request,'profile.html',{'customuser' : user})
+        return render(request,'profile.html',{'customuser' : user})
+    else:
+        return redirect('sign-in')
 
 
 
