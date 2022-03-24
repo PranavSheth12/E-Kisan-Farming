@@ -11,7 +11,7 @@
 {% if messages %}
 {% for message in messages %}
 
-<div class="alert alert-success" style:"font-size:1.5rem;">
+<div class="alert alert-{{message.tag}}" style="font-size:1.20rem; text-align:center">
     {{message}}
   </div>
 {% endfor %}

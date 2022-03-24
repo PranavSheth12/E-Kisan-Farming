@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import Contact
+from farmers.models import myproduct
 # Create your views here.
 def home(request):
     return render(request,'index.html')
@@ -21,7 +22,10 @@ def contact_us(request):
     return render(request,'contact-us.html')
 
 def products(request):
-    return render(request,'products.html')
+
+    products = myproduct.objects.all()
+    
+    return render(request,'products.html',{'products':products})
 
 def cart(request):
     return render(request,'cart.html')

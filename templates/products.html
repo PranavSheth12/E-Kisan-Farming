@@ -10,73 +10,21 @@
    
 
     <section class="container-2">
-        <div class="container3">
+        <div class="content">
 
-            <div class="item3">
-              <div class="in-bl card-img-top" onmouseover="showButtons(1)" onmouseout="hideButtons(1)">
-                <div>
-                  <img src="Careicious/1.facewash.jpg" class="WH4 card-img-top" height="150px" width="auto">
-                </div>
-                <div class="priceTag" style="font: message-box;">
-                  <span class="card-title">FACE WASH
-                    <br> </span> <br>
-                  <p class="card-text">Donkey milk face wash contains highly amount of antioxidant so one of the main
-                    functions of the ingredient is skin cell renewal it also contains polyquaternium which helps conditioning
-                    your skin making it clear and acne free and with light foaming face wash your skin doesn't get irritated
-                    neither it will get rashes.</p> <br>
-                  <span class="hide" id="BOX1">
-                    <span class="addtocartbu" id="AddToCart0">
-                      <a href="JavaScript:void(0)" onclick="incrementItem(0); 
-                              changeBG(0); ">Add to Cart</a>
-                    </span>
-                  </span>
-                </div>
-              </div>
+          {% for i in products %}
+
+          <div class="card" style="width: 18rem;">
+            <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5>{{i.name}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <div class="item3">
-              <div class="in-bl card-img-top" onmouseover="showButtons(2)" onmouseout="hideButtons(2)">
-                <div>
-                  <img src="Careicious/4.faceserum.jpg" class="WH4 card-img-top" height="150px" width="auto">
-                </div>
-                <div class="priceTag" style="font: message-box;">
-                  <span class="card-title"> FACE SERUM
-                    <br> </span> <br>
-                  <p class="card-text">Our premium face serum includes many ingredients that are best for our skin like
-                    vitamin e and vitamin d helping to reduce stress acne and this serum also includes bees wax which creates
-                    a protective layer on the skin . This serum helps reducing dark circles and making our skin clear and
-                    shiny.</p> <br>
-                  <span class="hide" id="BOX2">
-      
-                    <span class="addtocartbu" id="AddToCart1">
-                      <a href="JavaScript:void(0)" onclick="incrementItem(1); changeBG(1)">Add to Cart</a>
-                    </span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="item3">
-              <div class="in-bl card-img-top" onmouseover="showButtons(3)" onmouseout="hideButtons(3)">
-                <div>
-                  <img src="Careicious/8.facecream.jpg" class="WH4 card-img-top" height="150px" width="auto">
-                </div>
-                <div>
-                  <div class="priceTag" style="font: message-box;">
-                    <span class="card-title"> FACE CREAM
-                      <br> </span> <br>
-                    <p class="card-text">Donkey milk face cream supplies moisture to dry parts of your face , so your face
-                      will keep hydrated . It makes your skin soft , supple and plumps your skin , boosts your skin so that
-                      wrinkles and other lines on your face get reduced and it brightness your own skin tone.</p> <br>
-      
-                    <span class="hide" id="BOX3">
-      
-                      <span class="addtocartbu" id="AddToCart2">
-                        <a href="JavaScript:void(0)" onclick="incrementItem(2); changeBG(2);">Add to Cart</a>
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+          {% endfor %}
+          
         </div>
+       
     </section>
+    
     {% endblock container-2 %}
