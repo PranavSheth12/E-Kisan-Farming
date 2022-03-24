@@ -15,7 +15,7 @@ class CustomUser(models.Model):
     date_of_birth = models.DateField()
     category = models.CharField(max_length=50,default="")
     email = models.EmailField(max_length=254,default="")
-    phone = models.IntegerField(default=0)
+    phone = models.IntegerField(default=0,unique=True)
 
 
     def __str__(self):

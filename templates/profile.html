@@ -1,25 +1,20 @@
-{% extends "generic.html" %}
-{% load static %}
-
-{% block CSS-links %}
+{% extends "generic.html" %} {% load static %} {% block CSS-links %}
 <link rel="stylesheet" href="{% static 'CSS/profile.css' %} " />
 
-{% endblock CSS-links %}
-
-{% block container-2 %}
+{% endblock CSS-links %} {% block container-2 %}
 <section class="container-2">
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-3 info">
             <div class="img-div">
-               <img src="/media/{{customuser.profile_pic}}" alt="" class="profimg">
+               <img src="/media/{{customuser.profile_pic}}" alt="" class="profimg" />
             </div>
             <h4 class="name">{{customuser.name}}</h4>
             <div class="content">
                <p>Email : {{customuser.email}}</p>
                <p>Mobile : {{customuser.phone}}</p>
                <p>Date of Birth : {{customuser.date_of_birth|date:'d-m-Y'}}</p>
-               <p>Facebook : </p>
+               <p>Facebook :</p>
                <div class="but">
                   <button class="btn btn-primary btn-sm">Edit</button>
                </div>
@@ -28,49 +23,44 @@
 
          <div class="col-lg-9 info-2">
             <h2>My Products</h2>
-            <hr>
+            <hr />
+            {% for i in products %}
             <div class="content-2">
-
                <div class="row">
                   <div class="col-lg-4">
-                     
-                     <img src="{% static 'Images/Banana-modified.png' %}" class="img" alt="...">
-
+                     <img src="/media/{{i.image}}" class="img" alt="..." />
                   </div>
                   <div class="col-lg-8 info-3">
-                     <h4>Crop Name</h4>
+                     <h4>{{i.name}}</h4>
                      <table>
                         <tbody>
                            <tr>
-                              <td>Sown on : </td>
-                              <td></td>
+                              <td class="titles">Sown on :</td>
+                              <td>{{i.sown}}</td>
                            </tr>
                            <tr>
-                              <td>Reap on : </td>
-                              <td></td>
+                              <td class="titles">Reap on :</td>
+                              <td>{{i.reap}}</td>
                            </tr>
                            <tr>
-                              <td>Crop type : </td>
-                              <td></td>
+                              <td class="titles">Land area :</td>
+                              <td>{{i.land_area}}</td>
                            </tr>
                            <tr>
-                              <td>Land area : </td>
-                              <td></td>
+                              <td class="titles">Adress :</td>
+                              <td>{{i.address}}</td>
                            </tr>
                         </tbody>
-
                      </table>
-
                   </div>
                </div>
             </div>
-            
+            {% endfor %}
             <div class="content-2-btn">
-            <button class="btn btn-primary btn-sm ">Add</button>
-            <button class="btn btn-primary btn-sm ">Delete</button>
-         </div>
-
+               <button class="btn btn-primary btn-sm">Edit</button>
+            </div>
          </div>
       </div>
+   </div>
 </section>
 {% endblock container-2 %}
