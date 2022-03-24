@@ -28,3 +28,6 @@ def cart(request):
 
 def aboutus(request):
     return render(request,'aboutus.html')
+
+def contractfarming(request):
+    return render(request,'contractfarming.html')
