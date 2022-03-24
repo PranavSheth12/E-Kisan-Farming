@@ -51,9 +51,17 @@ td{
     text-align: left;
 }
 .content-2-btn{
-    width:65%;
-    margin:0 auto;
+    text-align: right;
+    width: 55%;
+    margin: auto;
 }
 .content-2-btn > .btn{
     width: 10%;
+}
+.titles{
+    width:30%;
+    vertical-align: -webkit-baseline-middle;
+}
+@media screen and (max-width: 1390px){
+    
 }

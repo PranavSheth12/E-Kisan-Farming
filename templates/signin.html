@@ -7,7 +7,16 @@
 {% endblock CSS-links %}
 
 {% block container-2 %}
-   
+
+{% if messages %}
+{% for message in messages %}
+
+<div class="alert alert-success" style:"font-size:1.5rem;">
+    {{message}}
+  </div>
+{% endfor %}
+{% endif %}
+
 
     <section class="container-2">
         

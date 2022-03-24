@@ -16,7 +16,7 @@ def sign_in(request):
             # messages.success(request, 'Logged in successfully')
             return redirect('profile')
         else:
-            #messages.error(request, 'Wrong username or password')
+            messages.error(request, 'Wrong username or password')
             return render(request,'signin.html',)
     return render(request,'signin.html')
 
@@ -38,8 +38,8 @@ def sign_up(request):
         customUser = CustomUser(username = username,name = name, email = email,date_of_birth = date_of_birth,profile_pic = profile_pic, phone=phone,category=category )
         customUser.save()
         
-        # messages.success(request,"You have signed up successfully")
-        return redirect('home')
+        messages.success(request,"You have signed up successfully")
+        return redirect('sign-in')
     return render(request,'signup.html')
 
 def sign_out(request):
@@ -48,5 +48,7 @@ def sign_out(request):
     return redirect('home')
     
 def forgot_password(request):
+
+
     return render(request,'forgot-password.html')
 
