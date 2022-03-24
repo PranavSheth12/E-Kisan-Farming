@@ -1,0 +1,170 @@
+.heading {
+    text-align: -webkit-center;
+}
+
+.image_bg_blur_parent .semi_transparent_bg
+           {
+             background: rgba(0, 0, 0, 0.35);
+             width:360px;
+             height:360px;
+             position: absolute;
+           }
+           .image_bg_blur_parent .image_bg_blur
+           {
+             
+             width: 360px;
+             height: 360px;
+             background-size: 100%;
+             -webkit-filter: blur(5px);
+             filter: blur(3px);
+             background-size: cover;
+             position: absolute;
+           }
+           .image_bg_blur_parent td
+           {
+             height: 360px;
+             width: 360px;
+             text-align: center;
+           }
+           .image_bg_blur_parent_big .image_bg_blur
+           {
+             width: 550px !important;
+             height: 550px !important;
+           }
+           .image_bg_blur_parent_big .semi_transparent_bg
+           {
+             width: 550px !important;
+             height: 550px !important;
+           }
+           .image_bg_blur_parent_big td
+           {
+             height: 550px !important;
+             width: 550px !important;
+             text-align: center;
+           }
+           .image_bg_blur_parent img
+           {
+           position: relative;
+           }
+                     
+           .image_bg_blur_parent_big table
+           {
+             position:absolute;
+           }
+           .image_bg_blur_parent_big .box_title
+           {
+             
+             position:relative;
+             color: white;
+             height: 50px;
+             background: rgba(26, 188, 156, 0.61);
+             padding: 15px;
+             margin-top: 500px;
+             width: 550px;
+             
+           }
+           .service_parent
+           {
+             padding: 20px 10px;
+             border: 1px solid rgba(195, 195, 195, 0.53);
+             transition: 2s;
+             background: #f7f7f7;
+           }
+           .service_parent:hover
+           {
+             background: rgba(240, 255, 252, 0.53);
+           }
+           .service_parent ul li
+           {
+             list-style: initial;
+             margin-left: 20px;
+           }
+           
+           
+           
+         .blur_bg
+         {
+             position: absolute;
+             z-index: 0;
+             display: block;
+             background-size: 350px 350px;
+             width: 340px;
+             height: 340px;
+             overflow: hidden;
+             -webkit-filter: blur(5px);
+             -moz-filter: blur(5px);
+             -o-filter: blur(5px);
+             -ms-filter: blur(5px);
+             margin: 5px 0 0 5px;
+             filter: blur(5px);
+         }
+         .semi_transparent
+         {
+             background: rgba(0,0,0,0.7);
+             width: 340px;
+             height: 340px;
+             margin: 0;
+             padding: 0;
+             position: absolute;
+             margin: 5px;
+         }
+         
+         .image_container
+         {
+             border:1px solid #d0d0d0;
+             width: 350px;
+             height: 350px;
+             padding: 25px;
+         }
+         .image_container table
+         {
+             height: 300px;
+             position: absolute;
+             width: 300px;
+         }
+         .image_container table img
+         {
+             position: relative;
+             z-index: 1;
+         }
+         
+         
+         
+         
+           
+           
+         .blur_bg_big
+         {
+             background-size: 540px 540px !important;
+             width: 540px !important;
+             height: 540px !important;
+         }
+         .semi_transparent_big
+         {
+             width: 540px !important;
+             height: 540px !important;
+         }
+         
+         .image_container_big
+         {
+             width: 550px !important;
+             height: 550px !important;
+             padding: 25px !important;
+         }
+         .image_container_big table
+         {
+             height: 500px !important;
+             width: 500px !important;
+         }
+         
+         h3.box_title
+         {	text-align:center;
+             font-size: 18px;
+             line-height: 24px;
+             background: #5ed0b9;
+             position: absolute;
+             width: 540px;
+             margin: 5px 0 0 5px;
+             padding: 10px;
+             color: white;
+         }
