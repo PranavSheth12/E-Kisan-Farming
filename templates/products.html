@@ -15,10 +15,16 @@
           {% for i in products %}
 
           <div class="card" style="width: 18rem;">
-            <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+            <img src="/media/{{i.product_image}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5>{{i.name}}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5>{{i.title}}</h5>
+              <p class="card-text">{{i.description}}</p>
+              
+              <form action="{% url 'add-to-cart' %}" class="d-inline">
+                <input type="hidden" name="prod_id" value="{{i.id}}" id="prod_id">
+                <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+              </form>
+
             </div>
           </div>
           {% endfor %}
@@ -28,3 +34,4 @@
     </section>
     
     {% endblock container-2 %}
+    

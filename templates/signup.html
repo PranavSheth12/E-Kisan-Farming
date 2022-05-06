@@ -3,6 +3,7 @@
 
 {% block CSS-links %}
 <link rel="stylesheet" href="{% static 'CSS/signup.css' %} " />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 {% endblock CSS-links %}
 
@@ -32,7 +33,7 @@
             <input type="email" class="in" name="email" placeholder="  Enter your email-id" required><br>
             
             <label for="phone">Contact </label><br>
-            <input type="number" class="in" name="phone" placeholder="  Enter your contact number" minlength="10" maxlength="10" required><br>
+            <input type="text" class="in" name="phone" placeholder="  Enter your contact number" pattern="[0-9]+"  minlength="10" maxlength="10" required><br>
 
             <label for="date_of_birth">Date of birth </label><br>
             <input type="date" class="in" name="date_of_birth" placeholder="  Enter your date of birth" required><br>
@@ -41,14 +42,24 @@
             <input type="file" class="in" name="profile_pic"  required><br>
 
             <label for="password">Password  </label><br>
-            <input type="password" class="in" name="password" placeholder="  Enter your password " minlength="8" required><br>
+            <input type="password" class="in" id="password" name="password" placeholder="  Enter your password " title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 
             <label for="password">Re-type Password  </label><br>
-            <input type="password" class="in" name="repassword" placeholder="Re-type password" minlength="8" required><br>
+            <input type="password" class="in" id="repassword" name="repassword" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Re-type password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"required><br>
+            <span id='message'></span>
             <input class="btn btn-primary btn-sm" type="submit" value="Sign Up">
-            
+            <!-- <p><strong>Note:</strong>Must be 8 characters or more, needs atleast one number and one letter.</p> -->
+
 
         </form>
         <div class="have-acc">Have an account? <a href="{% url 'sign-in' %}" style="text-decoration: none; color:#2C3333"><span> Sign In</span></a></div>
+        <script>
+            $('#password, #repassword').on('keyup', function () {
+                if ($('#password').val() == $('#repassword').val()) {
+                  $('#message').html('Matching').css('color', 'green');
+                } else 
+                  $('#message').html('Not Matching').css('color', 'red');
+              });
+        </script>
     </section>
     {% endblock container-2 %}

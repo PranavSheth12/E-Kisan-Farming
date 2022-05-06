@@ -69,6 +69,7 @@
              border: 1px solid rgba(195, 195, 195, 0.53);
              transition: 2s;
              background: #f7f7f7;
+             border-radius: 25px;
            }
            .service_parent:hover
            {
@@ -167,4 +168,12 @@
              margin: 5px 0 0 5px;
              padding: 10px;
              color: white;
+         }
+         #content{
+           padding:5%;
+         }
+         .para{
+           width: 60%;
+           margin-bottom: 70px;
+           font-size: 1.15rem;
          }

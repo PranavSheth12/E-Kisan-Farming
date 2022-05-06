@@ -19,7 +19,13 @@ def sign_in(request):
         if user is not None:
             login(request,user)
             # messages.success(request, 'Logged in successfully')
-            return redirect('profile')
+            user = request.user
+            user = CustomUser.objects.get(username = user.username)
+            
+            if user.category == 'farmer':
+                return redirect('profile')
+            else:
+                return redirect('profile-customer')
         else:
             messages.error(request, 'Wrong username or password')
             return render(request,'signin.html',)
@@ -32,6 +38,15 @@ def sign_up(request):
         username = request.POST.get('username')
         x = User.objects.filter(username=username)
 
+        password = request.POST.get('password')
+        repassword = request.POST.get('repassword')
+
+        if password != repassword:
+            messages.success(request,"password does not match")
+            return render(request,'signup.html')
+
+
+
         if not x:
         
             name = request.POST.get('name')
@@ -41,7 +56,7 @@ def sign_up(request):
             phone = request.POST.get('phone')
             category = request.POST.get('category')
 
-            password = request.POST.get('password')
+            # password = request.POST.get('password')
             print(profile_pic)
             user = User.objects.create_user(username=username, email=email,password=f'{password}')
             user.save()

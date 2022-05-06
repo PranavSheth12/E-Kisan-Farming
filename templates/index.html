@@ -21,6 +21,23 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <title>E-kisan Farming</title>
+    <style>
+        .alert-success{
+            color: #0f5132;
+            background-color: #d1e7dd;
+            border-color: #badbcc;   
+        }
+        .alert-warning{
+            color: #664d03;
+            background-color: #fff3cd;
+            border-color: #ffecb5;
+        }
+        .alert-error{
+            color: #842029;
+            background-color: #f8d7da;
+            border-color: #f5c2c7;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,7 +63,7 @@
                         <a class="nav-link " aria-current="page" href="{% url 'contractfarming' %}">Contract Farming</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="{% url 'cart' %}">Cart</a>
+                        <a class="nav-link " aria-current="page" href="{% url 'showcart' %}">Cart</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact-us' %}">Contact us</a>
@@ -72,6 +89,7 @@
                 </ul>
             </div>
         </nav>
+        
         <div class="container-fluid"></div>
         <!-- Navbar ends -->
         <div class="row">
@@ -87,6 +105,17 @@
         </div>
         </div>
     </section>
+    {% if messages %}
+        {% for message in messages %}
+        
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" style="font-size:1.20rem; text-align:center" role="alert">
+            {{message}}
+        
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        
+        {% endfor %}
+        {% endif %}
     <section class="container-2">
         <div class="container-fluid">
             <div class="row">
